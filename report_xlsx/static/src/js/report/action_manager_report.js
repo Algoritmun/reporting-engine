@@ -83,7 +83,7 @@ odoo.define("report_xlsx.report", function(require) {
 
         _makeReportUrls: function(action) {
             var reportUrls = this._super.apply(this, arguments);
-            reportUrls.xlsx = "/report/xlsx/" + action.report_name;
+            reportUrls.xlsx = "/report/xlsx/" + action.report_name + "/" + action.context.active_ids.toString();
             return reportUrls;
         },
 
